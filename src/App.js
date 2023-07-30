@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Color from "./components/Color";
+import Counter from "./components/Counter";
+import Form from "./components/Form";
+import StateEx from "./components/StateEx";
+import User from "./components/User";
 
+const title="Person Title";
+const Person={
+  name:"Baykal",
+  city:"Erzincan",
+  age:29
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+    <User data={Person} title={title}/>
+    <Counter/>
+    <StateEx/>
+    <Color/>
+    <Form/>
     </div>
   );
 }
