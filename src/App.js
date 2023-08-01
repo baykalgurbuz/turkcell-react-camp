@@ -1,23 +1,28 @@
-import { useState } from "react";
-import "./App.css";
-import UserDetail from "./components/UserDetail";
-import UserList from "./components/UserList";
  
-// const title="Person Title";
-// const Person={
-//   name:"Baykal",
-//   city:"Erzincan",
-//   age:29
-// }
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Login from './components/Login'
+import UserExample from "./components/UserExample";
+import UserDetailExample from "./components/UserDetailExample";
+import SignupForm from "./components/SignUpForm";
+ 
 function App() {
-  const [activeuserId,setActiveUserId]=useState(null);
+  
   return (
-    <div className="App">
-      <div>
-        <UserList setActiveUserId={setActiveUserId}/>
-      </div>
-      <div><UserDetail activeUserId={activeuserId}/></div>
+ 
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route index element={<Login/>}></Route>
+    //     <Route path="users" element={<UserExample/>}></Route>
+    //     <Route path="users/:id" element={<UserDetailExample/>}></Route>
+    //   </Routes>
+    // </BrowserRouter>
+    <div>
+      <SignupForm/>
     </div>
+  
+ 
+   
   );
 }
 
