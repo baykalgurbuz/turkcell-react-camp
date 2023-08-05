@@ -1,28 +1,18 @@
- 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Login from './components/Login'
-import UserExample from "./components/UserExample";
-import UserDetailExample from "./components/UserDetailExample";
-import SignupForm from "./components/SignUpForm";
- 
+import "./index.css";
+import HeaderToDo from "./components/Header";
+import Content from "./components/Content";
+import FooterToDo from "./components/FooterToDo";
+
 function App() {
   
   return (
- 
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route index element={<Login/>}></Route>
-    //     <Route path="users" element={<UserExample/>}></Route>
-    //     <Route path="users/:id" element={<UserDetailExample/>}></Route>
-    //   </Routes>
-    // </BrowserRouter>
-    <div>
-      <SignupForm/>
-    </div>
-  
- 
-   
+  <>
+    <section className="todoapp">
+     <HeaderToDo/>
+     <Content/>
+     <FooterToDo/>
+    </section>
+    </>
   );
 }
 
